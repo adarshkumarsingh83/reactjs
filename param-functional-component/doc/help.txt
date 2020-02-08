@@ -1,0 +1,5 @@
+$ npx create-react-app param-functional-component
+$ cd param-functional-component
+$ npm start 
+$ npm run build 
+$ npm start 

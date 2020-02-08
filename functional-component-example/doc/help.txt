@@ -1,0 +1,5 @@
+$ npx create-react-app functional-component-example
+$ cd functional-component-example
+$ npm start
+$ npm run build
+$ npm start

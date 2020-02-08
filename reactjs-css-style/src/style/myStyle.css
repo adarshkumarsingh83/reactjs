@@ -1,0 +1,13 @@
+.primary {
+  color: red;
+}
+
+.secondry {
+  color: green;
+}
+
+.myFont {
+  font-size: 72px;
+  font-style: italic;
+  font-family: cursive;
+}

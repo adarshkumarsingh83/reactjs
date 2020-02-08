@@ -1,0 +1,6 @@
+
+$ npx create-react-app react-basic-application
+$ cd react-basic-application
+$ npm start
+$ npm run build
+$ npm start

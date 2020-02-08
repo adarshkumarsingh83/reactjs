@@ -1,0 +1,5 @@
+$ npx create-react-app state-class-component
+$ cd state-class-component
+$ npm start 
+$ npm run build 
+$ npm start 

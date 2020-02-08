@@ -1,0 +1,5 @@
+$ npx create-react-app class-component-example
+$ cd class-component-example
+$ npm start
+$ npm run build
+$ npm start

@@ -1,0 +1,5 @@
+$ npx create-react-app param-class-component
+$ cd  param-class-component
+$ npm start 
+$ npm run build 
+$ npm start 
