@@ -1,15 +1,12 @@
 import React from "react";
-import HOComponent from "./HOComponent";
 
-class GenericComponent extends React.Component {
+class ComplaintComponent extends React.Component {
   render() {
     return (
       <React.Fragment>
         <br />
         <br />
-        <h1>
-          {this.props.name} Count {this.props.count}
-        </h1>
+        <h1>Complaint Count {this.props.count}</h1>
         <h2>Start {this.props.stars}</h2>
         <br />
         <div>
@@ -30,4 +27,4 @@ class GenericComponent extends React.Component {
   }
 }
 
-export default HOComponent(GenericComponent, 3);
+export default ComplaintComponent;

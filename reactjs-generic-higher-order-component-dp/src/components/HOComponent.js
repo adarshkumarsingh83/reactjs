@@ -1,4 +1,5 @@
 import React from "react";
+import configuration from "../store/configuration.json";
 
 const HOComponent = (OriginalComponent, startCounter) => {
   class CounterEnableComponent extends React.Component {
@@ -15,7 +16,7 @@ const HOComponent = (OriginalComponent, startCounter) => {
         const { name } = this.props;
         return {
           count: prevState.count + 1,
-          stars: prevState.count + 1 * startCounter
+          stars: (prevState.count + 1) * startCounter
         };
       });
     };
