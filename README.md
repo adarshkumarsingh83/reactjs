@@ -50,9 +50,9 @@ espark-springboot-reacjs
 
 react-conditional-rendering	
 
-reactjs-class-ref		r
+reactjs-class-ref		
 
-eactjs-portals
+reactjs-portals
 
 function-event-handler		
 
