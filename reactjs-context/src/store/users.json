@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "firstName": "adarsh",
+    "lastName": "kumar",
+    "email": "adarsh@kumar"
+  },
+  {
+    "id": 2,
+    "firstName": "amit",
+    "lastName": "kumar",
+    "email": "amit@kumar"
+  },
+  {
+    "id": 3,
+    "firstName": "radha",
+    "lastName": "singh",
+    "email": "radha@singh"
+  },
+  {
+    "id": 4,
+    "firstName": "songu",
+    "lastName": "singh",
+    "email": "sonu@singh"
+  }
+]
