@@ -1,7 +1,7 @@
 import React from "react";
 import configuration from "../store/configuration.json";
 
-const HOComponent = (OriginalComponent, startCounter) => {
+const HOComponent = OriginalComponent => {
   class CounterEnableComponent extends React.Component {
     constructor(props) {
       super(props);
@@ -12,6 +12,8 @@ const HOComponent = (OriginalComponent, startCounter) => {
     }
 
     countSubmit = () => {
+      const startCounter = configuration[this.props.name];
+      console.log(startCounter);
       this.setState(prevState => {
         const { name } = this.props;
         return {
@@ -22,6 +24,7 @@ const HOComponent = (OriginalComponent, startCounter) => {
     };
 
     render() {
+      console.log(this.props.name);
       return (
         <OriginalComponent
           count={this.state.count}

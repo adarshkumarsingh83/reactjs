@@ -30,4 +30,4 @@ class GenericComponent extends React.Component {
   }
 }
 
-export default HOComponent(GenericComponent, 3);
+export default HOComponent(GenericComponent);
