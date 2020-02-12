@@ -38181,10 +38181,12 @@ function (_React$Component) {
       };
       _services_RestApiServices__WEBPACK_IMPORTED_MODULE_1__["default"].addEmployee(user).then(function (res) {
         _this.setState({
-          message: 'Employee added successfully.'
+          message: "Employee added successfully."
         });
 
-        _this.props.history.push('/employees-list');
+        _this.props.history.push("/employees-list");
+      }).catch(function (error) {
+        console.log(error);
       });
     });
 
@@ -38193,10 +38195,10 @@ function (_React$Component) {
     });
 
     _this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      age: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      age: "",
       message: null
     };
     return _this;
@@ -38316,6 +38318,8 @@ function (_React$Component) {
           email: employee.email,
           age: employee.age
         });
+      }).catch(function (error) {
+        console.log(error);
       });
     });
 
@@ -38334,18 +38338,20 @@ function (_React$Component) {
       };
       _services_RestApiServices__WEBPACK_IMPORTED_MODULE_1__["default"].editEmployee(employee).then(function (res) {
         _this.setState({
-          message: 'Employee added successfully.'
+          message: "Employee added successfully."
         });
 
-        _this.props.history.push('/employees-list');
+        _this.props.history.push("/employees-list");
+      }).catch(function (error) {
+        console.log(error);
       });
     });
 
     _this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      age: ''
+      firstName: "",
+      lastName: "",
+      email: "",
+      age: ""
     };
     return _this;
   }
@@ -38458,13 +38464,15 @@ function (_React$Component) {
         _this.setState({
           employees: res.data
         });
+      }).catch(function (error) {
+        console.log(error);
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "deleteEmployee", function (id) {
       _services_RestApiServices__WEBPACK_IMPORTED_MODULE_1__["default"].deleteEmployee(id).then(function (res) {
         _this.setState({
-          message: 'Employee deleted successfully.'
+          message: "Employee deleted successfully."
         });
 
         _this.setState({
@@ -38472,19 +38480,21 @@ function (_React$Component) {
             return employee.id !== employee;
           })
         });
+      }).catch(function (error) {
+        console.log(error);
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "editEmployee", function (id, employee) {
       window.localStorage.setItem("id", id);
 
-      _this.props.history.push('/edit-employee');
+      _this.props.history.push("/edit-employee");
     });
 
     _defineProperty(_assertThisInitialized(_this), "addEmployee", function () {
       window.localStorage.removeItem("id");
 
-      _this.props.history.push('/add-employee');
+      _this.props.history.push("/add-employee");
     });
 
     _this.state = {
@@ -38504,12 +38514,12 @@ function (_React$Component) {
       }, "Employee Details"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-danger",
         style: {
-          width: '100px'
+          width: "100px"
         },
         onClick: function onClick() {
           return _this2.addEmployee();
         }
-      }, " Add User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+      }, " ", "Add User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "table table-striped"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         className: "hidden"
@@ -38521,15 +38531,15 @@ function (_React$Component) {
           onClick: function onClick() {
             return _this2.deleteEmployee(employee.id);
           }
-        }, " Delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, " ", "Delete"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "btn btn-success",
           onClick: function onClick() {
             return _this2.editEmployee(employee.id, employee);
           },
           style: {
-            marginLeft: '20px'
+            marginLeft: "20px"
           }
-        }, " Edit")));
+        }, " ", "Edit")));
       }))));
     }
   }]);
