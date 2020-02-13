@@ -30,6 +30,7 @@ const FunctionalComponent = () => {
           <li key={item.id}>{item.value}</li>
         ))}
       </ul>
+      {JSON.stringify(items)}
     </React.Fragment>
   );
 };
