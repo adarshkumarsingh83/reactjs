@@ -9,14 +9,21 @@ class MouseClassComponent extends React.Component {
     };
   }
 
+  trackMouse = event => {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY
+    });
+  };
+
   componentDidMount = () => {
     console.log("componentDidMount executed");
-    document.addEventListener("mousemove", event => {
-      this.setState({
-        x: event.clientX,
-        y: event.clientY
-      });
-    });
+    document.addEventListener("mousemove", this.trackMouse);
+  };
+
+  componentDidUmMount = () => {
+    console.log("componentDidUmMount executed");
+    document.removeEventListener("mousemove", this.trackMouse);
   };
 
   render() {

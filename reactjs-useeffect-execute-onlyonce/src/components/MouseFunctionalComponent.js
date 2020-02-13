@@ -13,6 +13,7 @@ const MouseFunctionalComponent = () => {
     console.log("componentDidMount executed");
     document.addEventListener("mousemove", trackMouse);
     return () => {
+      console.log("componentDidMount executed remove event");
       document.removeEventListener("mousemove", trackMouse);
     };
   }, []);
