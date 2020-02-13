@@ -8,15 +8,15 @@ class CounterClassComponent extends React.Component {
     };
   }
 
-  handleCount = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
   render() {
     return (
       <div>
         <label> Class Component</label>&nbsp;
-        <button onClick={this.handleCount}>
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}
+        >
           current count : {this.state.count}
         </button>
       </div>

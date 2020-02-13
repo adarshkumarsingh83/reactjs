@@ -14,9 +14,35 @@ const CalFunctionalComponent = () => {
       </div>
       <br />
       <div>
+        <label>increment by 5 </label>&nbsp;
+        <button
+          onClick={() => {
+            for (let i = 0; i < 5; i++) {
+              setCount(prevCount => prevCount + 1);
+            }
+          }}
+        >
+          incrmented 5
+        </button>
+      </div>
+      <br />
+      <div>
         <label>decrement</label>&nbsp;
         <button onClick={() => setCount(prevCount => prevCount - 1)}>
           decrement
+        </button>
+      </div>
+      <br />
+      <div>
+        <label>decrement by 5 </label>&nbsp;
+        <button
+          onClick={() => {
+            for (let i = 0; i < 5; i++) {
+              setCount(prevCount => prevCount - 1);
+            }
+          }}
+        >
+          decrement 5
         </button>
       </div>
       <br />
