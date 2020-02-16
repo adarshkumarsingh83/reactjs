@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/App.css";
-import { dataInit, renderFunction } from "./hooks/CounterUseReducerHook";
+import { dataInit, renderFunction } from "./operations/CounterOperation";
 import CounterContext from "./context/CounterContext";
 import MyCounter from "./components/MyCounter";
 import YourCounter from "./components/YourCounter";
@@ -16,7 +16,7 @@ function App() {
           actionFunction: operation
         }}
       >
-        <h1>{counterData.count}</h1>
+        <h1>Top Level Counter Value {counterData.count}</h1>
         <hr></hr>
         <MyCounter />
         <br />

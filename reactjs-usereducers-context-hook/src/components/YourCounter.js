@@ -9,7 +9,7 @@ const YourCounter = () => {
       <br />
       <br />
       <br />
-      <h1>Value of the Counter One {counterData.counter.count}</h1>
+      <h1>Counter Value in YourCounter {counterData.counter.count}</h1>
       <br />
       <button onClick={() => counterData.actionFunction("increment")}>
         INCREMENT
