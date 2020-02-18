@@ -13,7 +13,7 @@ const MyForm = () => {
 
   const handleSubmitForm = event => {
     event.preventDefault();
-    alert(`${firstName} ${lastName} `);
+    alert(`firstName: ${firstName} lastName: ${lastName} `);
     restFirstNameInput();
     restLastNameInput();
   };
