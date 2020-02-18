@@ -11,6 +11,6 @@ $ mvn spring-boot:run
 http://localhost:8080
 
 # TO GET THE RESPONSE FROM SERVER 
-* $ curl localhost:8080/api)
+* $ curl localhost:8080/api
 * $ curl localhost:8080/api/employees
 
