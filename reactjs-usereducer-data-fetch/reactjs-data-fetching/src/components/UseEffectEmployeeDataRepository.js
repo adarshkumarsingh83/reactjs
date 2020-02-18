@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const DataRepository = () => {
+const UseEffectEmployeeDataRepository = () => {
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState("");
   const [employees, setEmployees] = React.useState([]);
@@ -31,7 +31,7 @@ const DataRepository = () => {
             <ol key={employee.id}>
               {employee.id}&nbsp;
               {employee.firstName}&nbsp;
-              {employee.lastName}&nbsp; 
+              {employee.lastName}&nbsp;
               {employee.email}
             </ol>
           );
@@ -41,4 +41,4 @@ const DataRepository = () => {
   );
 };
 
-export default DataRepository;
+export default UseEffectEmployeeDataRepository;
