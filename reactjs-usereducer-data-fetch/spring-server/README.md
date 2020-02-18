@@ -1,13 +1,13 @@
-#To down load the node modules
+#TO DOWNLOAD THE NODE MODULES 
 $ npm i
 
-#To build the application
+#TO BUILD THE APPLICATION 
 $ mvn clean package
 
-#To execute the application
+#TO EXECUTE THE APPLICATION 
 $ mvn spring-boot:run
 
-#browser url
+#BROWSER URL 
 http://localhost:8080
 
 # TO GET THE RESPONSE FROM SERVER 
