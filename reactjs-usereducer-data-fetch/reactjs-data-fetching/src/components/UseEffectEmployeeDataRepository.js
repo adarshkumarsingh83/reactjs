@@ -23,9 +23,9 @@ const UseEffectEmployeeDataRepository = () => {
 
   return (
     <div>
-      <h1> {error ? error : null} </h1>
+      <h1> {error} </h1>
       <ul>
-        {loading ? "loading..." : null}
+        {loading && "loading..."}
         {employees.map(employee => {
           return (
             <ol key={employee.id}>
