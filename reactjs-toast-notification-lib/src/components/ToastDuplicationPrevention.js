@@ -19,10 +19,20 @@ class ToastDuplicationPrevention extends React.Component {
       toastId: this.customToastId
     });
   };
+
+  notificationClose = () => {
+    toast.dismiss(this.toastId);
+    toast.dismiss(this.customToastId);
+  };
+
   render() {
     return (
       <div>
-        <button onClick={this.notify}>NON DUPLICATE COMPOENT</button>
+        <button onClick={this.notify}>NON DUPLICATE TOAST</button>
+        &nbsp;
+        <button onClick={this.notificationClose}>
+          NON DUPLICATE TOAST CLOSE
+        </button>
       </div>
     );
   }
