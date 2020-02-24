@@ -3,3 +3,16 @@ $ npm install react-treebeard --save
 
 tree component help doc 
 https://github.com/storybookjs/react-treebeard
+
+#To build the docker image file 
+$ docker-compose build web
+$ docker-compose up web
+
+#To get the list of the images 
+$ docker image ls
+
+#To delete all the images 
+$ docker system prune -a
+
+URL : http://localhost:3000
+
