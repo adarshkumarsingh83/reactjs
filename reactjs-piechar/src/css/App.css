@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+div {
+  align-content: center;
+  height: 500px;
+  width: 500px;
+  background-color: powderblue;
+}
