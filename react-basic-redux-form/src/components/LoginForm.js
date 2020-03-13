@@ -4,8 +4,8 @@ import renderField from "./RenderFields";
 import formSubmit from "./FormSubmit";
 import validate from "./Validate";
 
-const LoginForm = props => {
-  const { error, handleSubmit, pristine, reset, submitting } = props;
+const LoginForm = ({ error, handleSubmit, pristine, reset, submitting }) => {
+  //const { error, handleSubmit, pristine, reset, submitting } = props;
   const { required, minLengthValue, maxLengthValue } = validate;
   return (
     <form onSubmit={handleSubmit(formSubmit)}>
@@ -39,6 +39,7 @@ const LoginForm = props => {
   );
 };
 
-export default reduxForm({
+let createReduxForm = reduxForm({
   form: "LoginForm"
-})(LoginForm);
+});
+export default createReduxForm(LoginForm);
