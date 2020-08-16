@@ -15,7 +15,7 @@
 * http://localhost:3000/
 
 ---
-###LIFE CYCLE METHOD 
+### LIFE CYCLE METHOD 
 ---
 
 ### MOUNTING 
