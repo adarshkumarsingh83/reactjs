@@ -1,51 +1,25 @@
-https://github.com/burkeholland/simple-react-snippets
 
-imr	    Import React
-imrc	Import React / Component
-imrs	Import React / useState
-imrse	Import React / useState useEffect
-impt	Import PropTypes
-impc	Import React / PureComponent
-cc	    Class Component
-ccc	    Class Component With Constructor
-sfc	    Stateless Function Component
-cdm	    componentDidMount
-uef	    useEffect Hook
-cwm	    componentWillMount
-cwrp	componentWillReceiveProps
-gds	    getDerivedStateFromProps
-scu	    shouldComponentUpdate
-cwu	    componentWillUpdate
-cdu	    componentDidUpdate
-cwu	    componentWillUpdate
-cdc	    componentDidCatch
-gsbu	getSnapshotBeforeUpdate
-ss	    setState
-ssf	    Functional setState
-usf	    Declare a new state variable using State Hook
-ren	    render
-rprop	Render Prop
-hoc	    Higher Order Component
+### To install the react create application util 
+* $ npm install -g create-react-app
 
-#To install the react create application util 
-$ npm install -g create-react-app
+### to use util for first application 
+* $ npx create-react-app <'myfirstreact'>
 
-#to use util for first application 
-$ npx create-react-app <myfirstreact>
+### to get inside the application 
+* $ cd myfirstreact
 
-#to get inside the application 
-$ cd myfirstreact
+### to start the application 
+* $ npm start
 
-#to start the application 
-$ npm start
+### to access the application on browser 
+* http://localhost:3000/
 
-# to access the application on browser 
-http://localhost:3000/
+---
+###LIFE CYCLE METHOD 
+---
 
-------------------------------------------------------------------------------------------
-LIFE CYCLE METHOD 
-------------------------------------------------------------------------------------------
-MOUNTING 
+### MOUNTING 
+```
 when a instance of the component is being created and inserted  into the dom 
 4 method in this phase 
 a. constructor(props){
@@ -72,8 +46,10 @@ d.componentDidMount()
  - called only once in life cycle,
  - call immediately after component and its child components have been render to the dom 
  - best place to call rest api call or external call to load the data. 
+```
 
-UPDATING 
+### UPDATING 
+```
 when a component is being re-rendered as the result of the change to the props or state 
 5 method in this 
 a. static getDerivedStateFromProps(props,state)
@@ -101,20 +77,22 @@ e.componentDidUpdate(prevProps,prevState,snapshot)
   - or after completing re-render cycle of component and its children 
   - this will return a value or null  
   - snapshot is the return value of the getSnapshotBeforeUpdate(prevProps,prevState) method.
-  
+``` 
   
 
-UNMOUNTING 
+### UNMOUNTING 
+```
 when a component is being removed from the dom 
 1 method only 
 componentWillUnmount()
  - called just before component is unmount and destroyed
  - good for clean up activity 
  - not to call setState method in this 
- 
+```
  
 
-ERROR HANDLING 
+### ERROR HANDLING 
+```
 when their is error during a rendering in a life cycle method 
 or in a constructor of any child component 
 2 method
@@ -123,17 +101,19 @@ b.componentDisCatch()
 - call when their is error in rendering 
   or in a lifecycle method or constructor of any child component 
   
-------------------------------------------------------------------------------------------
-REACTJS HOOKS 
-------------------------------------------------------------------------------------------
-1.useState
-2.useEffect
-3.useContext
-4.useReducer
-5.useCallback
-6.useMemo
-7.useRef
+```
 
-------------------------------------------------------------------------------------------
+---
+### REACTJS HOOKS 
+---
+* 1.useState
+* 2.useEffect
+* 3.useContext
+* 4.useReducer
+* 5.useCallback
+* 6.useMemo
+* 7.useRef
+
+
 
 
