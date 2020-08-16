@@ -20,7 +20,7 @@
 
 ----
 
-### To install react app creation urtil 
+### To install react app creation util 
 * $ npm install create-react-app -g
 
 ### To create application 
