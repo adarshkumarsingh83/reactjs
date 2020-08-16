@@ -6,7 +6,6 @@ alias adi='cd /Volumes/Adarsh-Home/'
 alias radha='cd /Volumes/Radha-Home/'
 
 
-
 #To install node 
 $ brew install node                     
 
