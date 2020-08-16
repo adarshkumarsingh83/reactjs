@@ -24,7 +24,7 @@
 
 * https://code.visualstudio.com/
 * plugin installtion 
-* 
+* ![IMAGE](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/VSCODE_PLUGIN.png)
 ----
 
 ### To install react app creation util 
