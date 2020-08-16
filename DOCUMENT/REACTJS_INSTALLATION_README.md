@@ -20,6 +20,13 @@
 
 ----
 
+### To install the VSCode 
+
+* https://code.visualstudio.com/
+* plugin installtion 
+* 
+----
+
 ### To install react app creation util 
 * $ npm install create-react-app -g
 
