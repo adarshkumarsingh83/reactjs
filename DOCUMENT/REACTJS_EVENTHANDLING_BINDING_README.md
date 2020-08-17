@@ -41,14 +41,53 @@ function Click(){
 ```
 
 ## Class Component 
-* [Example](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/class-event-handler)
+* binding the this keyword with the event 
+* it will rener every time the handler
 ```
 import React from 'react'
 
 class Click extends React.Component{
 
    constructor(){
-   	super()
+    super(props)
+    this.state = {
+          message:'welcome visitor'  
+       }
+       
+   }
+
+    changeMessage(){
+
+          this.setState({
+             message:"welcome to the espark"
+          })
+
+    }
+
+    render(){
+        return (
+          <div>
+            <h1>{this.state.message} </h1>
+            <button onClick={ () -> this.changeMessage.bind(this) }> visit </button>
+          <div>
+        )
+    }
+}
+
+```
+
+
+* [Example](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/class-event-handler)
+* using react autobinding 
+```
+import React from 'react'
+import autoBind from 'react-autobind'
+
+class Click extends React.Component{
+
+   constructor(){
+   	super(props)
+    autoBind(this)
 	   	 this.state = {
 	        message:'welcome visitor'  
 	   	 }
@@ -56,9 +95,9 @@ class Click extends React.Component{
 
     changeMessage(){
 
-          this.setState({
-          	     message:'Thanks for visit'
-          })
+          this.setState(state->({
+             message:"welcome to the espark"
+          }))
 
     }
 
