@@ -96,7 +96,7 @@ class Click extends React.Component{
     this.changeMessage = this.changeMessage.bind(this)   
    }
 
-    changeMessage(){
+    changeMessage = () =>{
 
           this.setState({
              message:"welcome to the espark"
@@ -134,7 +134,7 @@ class Click extends React.Component{
 	   	 }
    }
 
-    changeMessage(){
+    changeMessage (){
 
           this.setState(state->({
              message:"welcome to the espark"
