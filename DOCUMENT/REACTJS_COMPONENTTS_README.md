@@ -1,8 +1,10 @@
 # Components 
 > component is smaill unit of the functionality which is self contained 
+> 
 --- 
 
 ## Functional Component 
+* Stateless/ Dumb/ Presentational 
 * Js Fucntion and optinally recieved a object of props 
 * return html which is descibe a ui 
 * Example 
@@ -34,11 +36,14 @@ export default App;
 ---
 
 ## Class Components 
+* Satefule/ Smart/ Container 
+* Provide lifecycle hooks 
 * Es6 classes and optinally recieved a object of props 
 * it can maintaine the private intnal state 
 * return html which is descibe a ui 
 * this is extended from React.Component class 
 * it has render() method which return the htmnl as ui or null 
+* 
 ---
 * Example 
 * Welcome.js
