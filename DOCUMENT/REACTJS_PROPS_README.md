@@ -4,6 +4,8 @@
 --- 
 
 ## Functional Components 
+* [EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/param-functional-component
+)
 
 * Wish.js 
 ```
@@ -43,6 +45,7 @@ export default App;
 
 
 ### Class Component 
+* [EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/param-class-component)
 
 * Wish.js
 ```
