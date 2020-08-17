@@ -34,8 +34,11 @@ export default App;
 ---
 
 ## Class Components 
-* 
-* 
+* Es6 classes and optinally recieved a object of props 
+* it can maintaine the private intnal state 
+* return html which is descibe a ui 
+* this is extended from React.Component class 
+* it has render() method which return the htmnl as ui 
 ---
 * Example 
 * Welcome.js
