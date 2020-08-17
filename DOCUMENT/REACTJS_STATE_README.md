@@ -13,11 +13,13 @@
 * sate can be changed 
 * useState hook for funtional component 
 * this.sate for the Class component 
+* never modified the sate directly use setState() 
 
 
 
 ### IN Class component 
-* 
+
+* Wish.js 
 
 ```
 import React from 'react'
@@ -32,7 +34,7 @@ class Wish extends React.Component{
    }
 
     changeMessage(){
-    	 
+
           this.setState({
           	     message:'Thanks for visit'
           })
@@ -51,6 +53,8 @@ class Wish extends React.Component{
 
 ```
 
+* App.js 
+
 ```
 import React from 'react'
 import './App.css';
@@ -59,6 +63,59 @@ function App() {
   return (
     <div className="App">
      <Wish/>
+    </div>
+  );
+}
+export default App;
+```
+
+### setState() 
+
+* Counter.js 
+```
+import React from 'react'
+
+class Counter extends React.Component{
+
+   constructor(){
+   	super()
+	   	 this.state = {
+	        count:0
+	   	 }
+   }
+
+    changeCount(){
+
+          	this.setState((prvState,props)=>{
+                  count: prevState.count+1
+          		},() => {
+          	 console.log('call bacck',this.state.count)
+          	})
+
+    }
+
+    render(){
+        return (
+        	<div>
+        	  <h1>{this.state.count} </h1>
+        	  <button onClick={ () -> this.changeCount() }> count </button>
+        	<div>
+        )
+    }
+}
+
+```
+
+* App.js 
+
+```
+import React from 'react'
+import './App.css';
+import Counter from './components/Counter'
+function App() {
+  return (
+    <div className="App">
+     <Counter/>
     </div>
   );
 }
