@@ -43,7 +43,7 @@ export default App;
 * return html which is descibe a ui 
 * this is extended from React.Component class 
 * it has render() method which return the htmnl as ui or null 
-* 
+
 ---
 * Example 
 * Welcome.js
