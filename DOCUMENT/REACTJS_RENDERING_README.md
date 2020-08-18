@@ -20,7 +20,7 @@
       return(
             <div>
               {
-              	names.map(name => <h1> {name} </h1>)
+              	names.map((name, index) => <h1 key={index}> {index} $nbsp; {name} </h1>)
               }
             </div>
       	)
