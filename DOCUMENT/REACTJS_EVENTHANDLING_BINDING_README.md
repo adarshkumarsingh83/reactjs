@@ -18,6 +18,7 @@ export default App;
 ```
 
 ## Functional Component 
+* [Example](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-binding-event-handling)
 * [Example](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/function-event-handler)
 ```
 import React from 'react'
