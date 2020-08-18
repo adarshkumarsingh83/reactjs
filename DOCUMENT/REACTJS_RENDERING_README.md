@@ -11,6 +11,7 @@
 
  * List Rendering 
  * [REACTJS_NODEJS_JSON_CLIENT_SERVER_EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-nodejs-example)
+
  ```
   import React from 'react';
 
@@ -29,6 +30,10 @@
 
   export default ShowList;
 
+-----------------------------
+NOTE we can use index as a key only when 
+1.list don't have unique items 
+2. list is static no update no delete 
  ```
 
 ---
