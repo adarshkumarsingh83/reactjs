@@ -24,6 +24,8 @@
 
 * [REACTJS_EVENT_HANDLING_BINDING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_EVENTHANDLING_BINDING_README.md)
 
+* [REACTJS_MEHOD_AS_PROPS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_METHOD_AS_PROPS_README.md)
+
 
 ---
 
