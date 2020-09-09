@@ -10,12 +10,12 @@
 * proj/public/logo512.png 
 * proj/public/index.html 
     ```
-    #Cleanup 
+    #Cleanup from proj/public/index.html 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     ```
 * proj/public/manifest.json
     ```
-    #Cleanup 
+    #Cleanup from proj/public/manifest.json
         {
           "src": "logo192.png",
           "type": "image/png",
@@ -37,7 +37,7 @@
 * proj/src/logo.svg
 * proj/src/App.js
     ```
-    #Cleanup 
+    #Cleanup in proj/src/App.js
     import logo from './logo.svg';
     and 
     <header className="App-header">
