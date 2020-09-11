@@ -19,6 +19,7 @@
 ---
 
 ### MOUNTING 
+* [COMPONENT MOUNTING LIFECYCLE EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/component-mounting-lifecycle)
 ```
 when a instance of the component is being created and inserted  into the dom 
 4 method in this phase 
@@ -49,6 +50,7 @@ d.componentDidMount()
 ```
 
 ### UPDATING 
+* [COMPONENT UPDATING LIFECYCLE EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/component-updating-lifecycle)
 ```
 when a component is being re-rendered as the result of the change to the props or state 
 5 method in this 
