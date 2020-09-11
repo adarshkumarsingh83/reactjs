@@ -43,3 +43,13 @@ export default XxxxPureComponent;
 ## Functional Component 
 * memo is used for functional component in reactjs for achivveing the same 
 * [REACTJS MEMO COMPONENT EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-memo-component)
+* sample code sinippet for memo component
+```
+import React from "react";
+
+const XxxxMemoComponent = ({ name }) => {
+  console.log("XxxxMemoComponent render()");
+  return <h1>{name}</h1>;
+};
+export default React.memo(XxxxMemoComponent);
+```
