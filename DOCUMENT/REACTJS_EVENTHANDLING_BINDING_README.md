@@ -66,7 +66,7 @@ function Click(){
 
 ## Class Component 
 * binding the this keyword with the event 
-* it will rener every time the component 
+* it will render every time the component 
 * perforamce impact 
 ```
 import React from 'react'
