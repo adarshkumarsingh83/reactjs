@@ -1,6 +1,0 @@
-npm install --save axios
-
-npm install --save rest
-
-npm install --save react-router-dom
-
