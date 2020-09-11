@@ -22,7 +22,7 @@
 
 * [REACTJS_METHOD_AS_PROPS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_METHOD_AS_PROPS_README.md)
 
-* [REACTJS_RENDING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_RENDERING_README.md)
+* [REACTJS_RENDERING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_RENDERING_README.md)
 
 * [REACTJS_LIFECYCLE_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_LIFECYCLE_README.md)
 
