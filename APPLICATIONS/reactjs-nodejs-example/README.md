@@ -1,11 +1,10 @@
 
-
-# SERVER APPLICATION STEPS 
-
-* $ cd reactjs-nodejs-example/server
-
 # NODEJS AND REACTJS SAMPLE 
+
+## SERVER APPLICATION STEPS 
+ 
 ```
+cd reactjs-nodejs-example/server
 
 reactjs-nodejs-example/server $ npm install express --save 
 
@@ -18,7 +17,7 @@ reactjs-nodejs-example/server $ npm install cors --save
 reactjs-nodejs-example/server $ npm i
 ```
 
-# To start the application 
+## To start the application 
 
 * reactjs-nodejs-example/server $ node server.js
 * or 
@@ -28,7 +27,8 @@ reactjs-nodejs-example/server $ npm i
 
 ---
 
-# CLIENT APPLICATION STEPS 
+## CLIENT APPLICATION STEPS 
+
 ```
 cd reactjs-nodejs-example/client/nodejs-client 
 
@@ -40,5 +40,8 @@ reactjs-nodejs-example/client/nodejs-client $ npm i
 
 reactjs-nodejs-example/client/nodejs-client $ npm run build  
 
-reactjs-nodejs-example/client/nodejs-client $ npm start 
+
 ```
+## To start the application 
+
+* reactjs-nodejs-example/client/nodejs-client $ npm start 
