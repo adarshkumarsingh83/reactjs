@@ -27,3 +27,6 @@ componentDidMount = () => {
 
 ## Refs with class 
 * [REACTJS REFS WITH PAREENT CHILD COMPONENT EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/blob/master/APPLICATIONS/reactjs-class-ref)
+
+## Refs Forwarding 
+* [REACTJS REFS FORWARDING EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-ref-forwarding)
