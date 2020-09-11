@@ -110,7 +110,7 @@ export default ModuleStyle;
 ## Bootstrap f/w 
 ## [BOOTSTRAP REACTJS EXAAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-bootstrap)
 * To Install Bootstrap
-	* $ npm install bootstrap jquery propper propper.js --save
+	* $ npm install bootstrap jquery popper.js --save
 * import the bootstrap in index.js
 	* proj/src/index.js
 ```
