@@ -6,15 +6,11 @@
 
 * [REACTJS_INSTALLATION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_INSTALLATION_README.md)
 
-* [REACTJS_LIFECYCLE_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_LIFECYCLE_README.md)
-
 * [REACTJS_HELP_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_HELP_README.md)
 
-* [REDUX_INSTALLTION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REDUX_HELP.README.md)
+* [REACTJS_JSX_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_JSX_README.md)
 
 * [REACCTJS_COMPONENT_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_COMPONENTTS_README.md)
-
-* [REACTJS_JSX_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_JSX_README.md)
 
 * [REACTJS_PORPS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_PROPS_README.md)
 
@@ -28,6 +24,9 @@
 
 * [REACTJS_RENDING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_RENDERING_README.md)
 
+* [REACTJS_LIFECYCLE_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_LIFECYCLE_README.md)
+
+* [REDUX_INSTALLTION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REDUX_HELP.README.md)
 
 ---
 
