@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-
 import RestApiServices from "../services/RestApiServices";
 
 class ListEmployeeComponent extends Component {
@@ -29,9 +27,10 @@ class ListEmployeeComponent extends Component {
         RestApiServices.deleteEmployee(id)
             .then(res => {
                 this.setState({ message: 'Employee deleted successfully.' });
-                this.setState({ employees: this.state.employees.filter(employee => employee.id !== employee) });
-            })
-
+                this.setState({ employees: this.state.employees.filter(employee => employee.id !== employee) });  
+                this.reloadEmployeeList();   
+            })    
+            
     }
 
     editEmployee = (id, employee) => {
@@ -58,6 +57,8 @@ class ListEmployeeComponent extends Component {
                             <th>LastName</th>
                             <th>Email</th>
                             <th>Age</th>
+                            <th>operations</th>
+                            <th>operations</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,12 +66,15 @@ class ListEmployeeComponent extends Component {
                             this.state.employees.map(
                                 employee =>
                                     <tr key={employee.id}>
+                                         <td>{employee.id}</td>
                                         <td>{employee.firstName}</td>
                                         <td>{employee.lastName}</td>
                                         <td>{employee.email}</td>
                                         <td>{employee.age}</td>
                                         <td>
                                             <button className="btn btn-success" onClick={() => this.deleteEmployee(employee.id)}> Delete</button>
+                                        </td>
+                                        <td>
                                             <button className="btn btn-success" onClick={() => this.editEmployee(employee.id, employee)} style={{ marginLeft: '20px' }}> Edit</button>
                                         </td>
                                     </tr>

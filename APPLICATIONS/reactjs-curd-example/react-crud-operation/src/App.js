@@ -16,17 +16,15 @@ class App extends React.Component {
        return (
            <div className="container">
              <Router>
-               <div className="col-md-6">
-                 <h1 className="text-center">
-                   React Employee Application
-                 </h1>
+                 <div class="alert alert-primary" role="alert">
+                    <h4 class="display-3">React Employee Application</h4>
+                  </div>
                  <Switch>
                    <Route path="/" exact component={ListEmployeeComponent} />
                    <Route path="/employees-list" component={ListEmployeeComponent} />
                    <Route path="/add-employee" component={AddEmployeeComponent} />
                    <Route path="/edit-employee" component={EditEmployeeComponent} />
                  </Switch>
-               </div>
              </Router>
            </div>
          );

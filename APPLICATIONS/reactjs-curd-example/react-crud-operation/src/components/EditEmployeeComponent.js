@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
+
 import RestApiServices from "../services/RestApiServices";
 
-class AddEmployeeComponent extends Component {
+class EditEmployeeComponent extends Component {
 
     constructor(props) {
         super(props);
@@ -10,32 +11,48 @@ class AddEmployeeComponent extends Component {
             firstName: '',
             lastName: '',
             email: '',
-            age: '',
-            message: null
+            age: ''
         }
     }
 
-    saveEmployee = (e) => {
-        e.preventDefault();
-        let user = { firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, age: this.state.age };
-        RestApiServices.addEmployee(user)
-            .then(res => {
-                this.setState({ message: 'Employee added successfully.' });
-                this.props.history.push('/employees');
+    componentDidMount = () => {
+        this.loadEmployee();
+    }
+
+    loadEmployee = () => {
+        RestApiServices.fetchEmployeeById(window.localStorage.getItem("id"))
+            .then((res) => {
+                let employee = res.data;
+                this.setState({
+                    id: employee.id,
+                    firstName: employee.firstName,
+                    lastName: employee.lastName,
+                    email: employee.email,
+                    age: employee.age
+                })
             });
     }
+
 
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-
+    saveEmployee = (e) => {
+        e.preventDefault();
+        let employee = { id: this.state.id, firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, age: this.state.age };
+        RestApiServices.editEmployee(employee)
+            .then(res => {
+                this.setState({ message: 'Employee added successfully.' });
+                this.props.history.push('/employees-list');
+            });
+    }
 
     render() {
         return (
             <div>
                 {this.state.message}
-                <h2 className="text-center">Add User</h2>
+                <h2 className="text-center">Edit User</h2>
                 <form>
 
                     <div className="form-group">
@@ -65,4 +82,4 @@ class AddEmployeeComponent extends Component {
     }
 }
 
-export default AddEmployeeComponent;
+export default EditEmployeeComponent;
