@@ -24,6 +24,8 @@
 
 * [REACTJS_RENDERING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_RENDERING_README.md)
 
+* [REACTJS_STYLING_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_STYLING_README.md)
+
 * [REACTJS_LIFECYCLE_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_LIFECYCLE_README.md)
 
 * [REDUX_INSTALLTION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REDUX_HELP.README.md)
