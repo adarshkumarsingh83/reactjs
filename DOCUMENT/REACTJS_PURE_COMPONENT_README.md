@@ -21,3 +21,18 @@
 			* return true if a and b are referenceing to same object 
 * [REACTJS PURE COMPONENT EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/react-pure-component)
 
+```
+import React, { PureComponent } from "react";
+
+class XxxxPureComponent extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    console.log("XxxxPureComponent render()");
+    return <h1>{this.props.name}</h1>;
+  }
+}
+
+export default XxxxPureComponent;
+```
