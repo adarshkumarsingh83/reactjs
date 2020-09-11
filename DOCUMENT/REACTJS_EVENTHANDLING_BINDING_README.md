@@ -77,16 +77,13 @@ class Click extends React.Component{
     super(props)
     this.state = {
           message:'welcome visitor'  
-       }
-       
+       }     
    }
 
     changeMessage(){
-
-          this.setState({
-             message:"welcome to the espark"
-          })
-
+      this.setState({
+        message:"welcome to the espark"
+      })
     }
 
     render(){
@@ -113,17 +110,47 @@ class Click extends React.Component{
     super(props)
     this.state = {
           message:'welcome visitor'  
-       }
-       
+       }       
     this.changeMessage = this.changeMessage.bind(this)   
    }
 
+   changeMessage {
+
+        this.setState({
+           message:"welcome to the espark"
+        })
+    }
+
+    render(){
+        return (
+          <div>
+            <h1>{this.state.message} </h1>
+              <button onClick={() => this.changeMessage() }> visit </button>
+          <div>
+        )
+    }
+}
+
+```
+
+---
+
+```
+import React from 'react'
+
+class Click extends React.Component{
+
+   constructor(){
+    super(props)
+    this.state = {
+          message:'welcome visitor'  
+       }
+   }
+
     changeMessage = () =>{
-
-          this.setState({
-             message:"welcome to the espark"
-          })
-
+      this.setState({
+         message:"welcome to the espark"
+      })
     }
 
     render(){
