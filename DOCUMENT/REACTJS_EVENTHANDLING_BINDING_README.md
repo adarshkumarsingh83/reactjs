@@ -175,30 +175,28 @@ import autoBind from 'react-autobind'
 
 class Click extends React.Component{
 
-   constructor(){
+  constructor(){
    	super(props)
     autoBind(this)
-	   	 this.state = {
-	        message:'welcome visitor'  
-	   	 }
-   }
+	  this.state = {
+	    message:'welcome visitor'  
+	  }
+  }
 
-    changeMessage (){
+  changeMessage (){
+    this.setState(state->({
+       message:"welcome to the espark"
+    }))
+  }
 
-          this.setState(state->({
-             message:"welcome to the espark"
-          }))
-
-    }
-
-    render(){
-        return (
-        	<div>
-        	  <h1>{this.state.message} </h1>
-        	  <button onClick={ () -> this.changeMessage() }> visit </button>
-        	<div>
-        )
-    }
+  render(){
+    return (
+      <div>
+        <h1>{this.state.message} </h1>
+        <button onClick={ () -> this.changeMessage() }> visit </button>
+      <div>
+    )
+  }
 }
 
 ```
