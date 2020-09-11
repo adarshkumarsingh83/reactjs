@@ -32,6 +32,8 @@
 
 * [REACTJS_PURE_COMPONENT_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_PURE_COMPONENT_README.md)
 
+* [REACTJS_REFS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_REFS_README.md)
+
 * [REDUX_INSTALLTION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REDUX_HELP.README.md)
 
 ---
