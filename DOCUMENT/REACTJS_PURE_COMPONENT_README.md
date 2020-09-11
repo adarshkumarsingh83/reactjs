@@ -2,13 +2,16 @@
 > pure component doesn't render every time without changeing the state or props of the component 
 ---
 
+
 ### Regular componentt 
 * implement shoudlComponentUpdate() always reutrn true by default 
 * which render the component without the props/ state change 
 * [REACTJS COMPONENT EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/react-pure-component)
 
 
-### Pure componentt 
+## Pure component is in Class component 
+
+### Pure component
 * implement shoudlComponentUpdate() always reutrn based in props/ state change comparsion
 * shallow comparsion (sc)
 	* sc of prevState with currentState 
@@ -36,3 +39,7 @@ class XxxxPureComponent extends PureComponent {
 
 export default XxxxPureComponent;
 ```
+
+## Functional Component 
+* memo is used for functional component in reactjs for achivveing the same 
+* [REACTJS MEMO COMPONENT EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-memo-component)
