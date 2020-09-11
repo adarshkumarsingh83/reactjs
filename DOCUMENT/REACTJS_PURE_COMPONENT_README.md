@@ -10,6 +10,9 @@
 
 ### Pure componentt 
 * implement shoudlComponentUpdate() always reutrn based in props/ state change comparsion
+* shallow comparsion (sc)
+	* sc of prevState with currentState 
+	* sc of preProps with currentProps
 * which render the component only when their is the props/ state change 
 	*  it do shallow comparsion internally for 
 		* primitive types 
