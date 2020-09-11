@@ -1,8 +1,14 @@
-HELP.md
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+
+.mvn
+mvnw
+mvnw.cmd
+node_modules
+package-lock.json
 
 ### STS ###
 .apt_generated
@@ -26,6 +32,7 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
+
 
 ### VS Code ###
 .vscode/
