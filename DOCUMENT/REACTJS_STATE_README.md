@@ -15,7 +15,8 @@
 * this.sate for the Class component 
 * never modified the sate directly use setState() 
 
-
+### In Functional Component hooks are used for state mgmt.
+[STATE-MGMT-FUNCTIONAL-COMPONENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_HOOKS_README.md)
 
 ### IN Class component 
 * [EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/state-class-component)
@@ -123,3 +124,4 @@ function App() {
 }
 export default App;
 ```
+
