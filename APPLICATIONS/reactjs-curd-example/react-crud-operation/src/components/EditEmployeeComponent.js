@@ -23,6 +23,7 @@ class EditEmployeeComponent extends Component {
         RestApiServices.fetchEmployeeById(window.localStorage.getItem("id"))
             .then((res) => {
                 let employee = res.data;
+                this.setState({ message: 'Employee fetch operation is successfully ' });
                 this.setState({
                     id: employee.id,
                     firstName: employee.firstName,
@@ -30,6 +31,11 @@ class EditEmployeeComponent extends Component {
                     email: employee.email,
                     age: employee.age
                 })
+            }).catch(error => {
+                this.setState({ message: 'Employee fetch operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`fetch operation call completed`);
             });
     }
 
@@ -43,7 +49,12 @@ class EditEmployeeComponent extends Component {
         let employee = { id: this.state.id, firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, age: this.state.age };
         RestApiServices.editEmployee(employee)
             .then(res => {
-                this.setState({ message: 'Employee added successfully.' });
+                this.setState({ message: 'Employee edited successfully.' });
+            }).catch(error => {
+                this.setState({ message: 'Employee edited operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`edited operation call completed`);
                 this.props.history.push('/employees-list');
             });
     }

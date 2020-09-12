@@ -51,6 +51,7 @@ export default RestApiServices;
 ### handle post calls 
 ```
 import React, { Component } from 'react'
+
 import RestApiServices from "../services/RestApiServices";
 
 class AddEmployeeComponent extends Component {
@@ -65,24 +66,35 @@ class AddEmployeeComponent extends Component {
             message: null
         }
     }
+
     saveEmployee = (e) => {
         e.preventDefault();
         let user = { firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, age: this.state.age };
         RestApiServices.addEmployee(user)
             .then(res => {
                 this.setState({ message: 'Employee added successfully.' });
+            }).catch(error => {
+                this.setState({ message: 'Employee addding operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`save operation call completed`);
                 this.props.history.push('/employees-list');
             });
     }
+
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
+
+
+
     render() {
         return (
             <div>
                 {this.state.message}
                 <h2 className="text-center">Add User</h2>
                 <form>
+
                     <div className="form-group">
                         <label>First Name:</label>
                         <input placeholder="First Name" name="firstName" className="form-control" value={this.state.firstName} onChange={this.onChange} />
@@ -116,7 +128,9 @@ export default AddEmployeeComponent;
 ```
 import React, { Component } from 'react'
 import RestApiServices from "../services/RestApiServices";
+
 class ListEmployeeComponent extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -132,9 +146,16 @@ class ListEmployeeComponent extends Component {
     reloadEmployeeList = () => {
         RestApiServices.fetchEmployee()
             .then((res) => {
+                this.setState({ message: 'Employee fetch operation is successfull ' });
                 console.log(res.data)
                 this.setState({ employees: res.data })
-            });
+            }).catch(error => {
+                this.setState({ message: 'Employee fetch operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`fetch operation call completed`);
+                
+            });  
     }
 
     deleteEmployee = (id) => {
@@ -142,8 +163,14 @@ class ListEmployeeComponent extends Component {
             .then(res => {
                 this.setState({ message: 'Employee deleted successfully.' });
                 this.setState({ employees: this.state.employees.filter(employee => employee.id !== employee) });  
-                this.reloadEmployeeList();   
-            })    
+            }).catch(error => {
+                this.setState({ message: 'Employee deleted operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`deleted operation call completed`);
+                this.reloadEmployeeList();
+                this.props.history.push('/employees-list');
+            });    
             
     }
 
@@ -207,6 +234,8 @@ export default ListEmployeeComponent;
 ### handle put call 
 ```
 import React, { Component } from 'react'
+
+
 import RestApiServices from "../services/RestApiServices";
 
 class EditEmployeeComponent extends Component {
@@ -229,6 +258,7 @@ class EditEmployeeComponent extends Component {
         RestApiServices.fetchEmployeeById(window.localStorage.getItem("id"))
             .then((res) => {
                 let employee = res.data;
+                this.setState({ message: 'Employee fetch operation is successfully ' });
                 this.setState({
                     id: employee.id,
                     firstName: employee.firstName,
@@ -236,8 +266,14 @@ class EditEmployeeComponent extends Component {
                     email: employee.email,
                     age: employee.age
                 })
+            }).catch(error => {
+                this.setState({ message: 'Employee fetch operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`fetch operation call completed`);
             });
     }
+
 
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
@@ -248,7 +284,12 @@ class EditEmployeeComponent extends Component {
         let employee = { id: this.state.id, firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, age: this.state.age };
         RestApiServices.editEmployee(employee)
             .then(res => {
-                this.setState({ message: 'Employee added successfully.' });
+                this.setState({ message: 'Employee edited successfully.' });
+            }).catch(error => {
+                this.setState({ message: 'Employee edited operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`edited operation call completed`);
                 this.props.history.push('/employees-list');
             });
     }
@@ -259,6 +300,7 @@ class EditEmployeeComponent extends Component {
                 {this.state.message}
                 <h2 className="text-center">Edit User</h2>
                 <form>
+
                     <div className="form-group">
                         <label>First Name:</label>
                         <input placeholder="First Name" name="firstName" className="form-control" value={this.state.firstName} onChange={this.onChange} />
@@ -285,6 +327,7 @@ class EditEmployeeComponent extends Component {
         );
     }
 }
+
 export default EditEmployeeComponent;
 ```
 ### app component 

@@ -21,6 +21,11 @@ class AddEmployeeComponent extends Component {
         RestApiServices.addEmployee(user)
             .then(res => {
                 this.setState({ message: 'Employee added successfully.' });
+            }).catch(error => {
+                this.setState({ message: 'Employee addding operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`save operation call completed`);
                 this.props.history.push('/employees-list');
             });
     }

@@ -18,9 +18,16 @@ class ListEmployeeComponent extends Component {
     reloadEmployeeList = () => {
         RestApiServices.fetchEmployee()
             .then((res) => {
+                this.setState({ message: 'Employee fetch operation is successfull ' });
                 console.log(res.data)
                 this.setState({ employees: res.data })
-            });
+            }).catch(error => {
+                this.setState({ message: 'Employee fetch operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`fetch operation call completed`);
+                
+            });  
     }
 
     deleteEmployee = (id) => {
@@ -28,8 +35,14 @@ class ListEmployeeComponent extends Component {
             .then(res => {
                 this.setState({ message: 'Employee deleted successfully.' });
                 this.setState({ employees: this.state.employees.filter(employee => employee.id !== employee) });  
-                this.reloadEmployeeList();   
-            })    
+            }).catch(error => {
+                this.setState({ message: 'Employee deleted operation is failed ' });
+                console.log(error);
+            }).finally(()=>{
+                console.log(`deleted operation call completed`);
+                this.reloadEmployeeList();
+                this.props.history.push('/employees-list');
+            });    
             
     }
 
