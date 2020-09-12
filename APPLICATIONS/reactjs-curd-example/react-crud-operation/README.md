@@ -1,4 +1,4 @@
-# React curd operation 
+# React Crud operation 
 
 ---
 
