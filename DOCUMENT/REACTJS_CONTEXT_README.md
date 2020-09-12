@@ -47,7 +47,7 @@ class ColumnComponent extends React.Component {
 export default ColumnComponent;
 ```
 
-* context is used directly for data sharing 
+* context consumer is used directly for get sharing context data either default or supplied from provider 
 ```
 import React from "react";
 import ColumnComponent from "./ColumnComponent";
@@ -89,7 +89,7 @@ class TableComponent extends React.Component {
 export default TableComponent;
 ```
 
-### app component from where two times same component is used with context and without context 
+### app component from where two times same component is used with context for override context data and without context for defautl context data 
 ```
 import React from "react";
 import "./css/App.css";
