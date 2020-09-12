@@ -20,6 +20,8 @@
 ### [REACTJS USESTATE HOOK OBJECT EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-usestate-object)
 ### [REACTJS USESTATE HOOK ARRAY EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-usestate-array)
 ### [REACTJS USESTATE HOOK FUNCTIONAL PARAM EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-usestate-funtionparm)
+
+* useState hook setXxx() will not merge the previous state of object or array we have to do manually 
 * import the useState Hook 
 ```
  import { useState } from 'react';
