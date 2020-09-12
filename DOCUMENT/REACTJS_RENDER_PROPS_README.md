@@ -8,7 +8,6 @@
 ### Crate a render props component 
 ```
 import React from "react";
-
 class RenderPropComponent extends React.Component {
   constructor(props) {
     super(props);
