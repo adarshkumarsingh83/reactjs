@@ -1,68 +1,103 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reactjs Error Boundary 
+> when component failed to load then to perform error handling 
+> when ever the error occurs in main component error boundries will be executed as the catch fallback code 
+---
+### Main Component 
+```
+import React from "react";
+class Row extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-## Available Scripts
+  render() {
+    if (this.props.user.id === -1) {
+      throw new Error("Not A Valid User Data");
+    }
+    return (
+      <React.Fragment>
+        <ul className="ul" id="user" key={this.props.user.id}>
+          {this.props.user.id} &nbsp;&nbsp;
+          {this.props.user.firstName} &nbsp;&nbsp;
+          {this.props.user.lastName}&nbsp;&nbsp;
+          {this.props.user.email}
+        </ul>
+      </React.Fragment>
+    );
+  }
+}
+export default Row;
+```
+### Create a Error Boundries 
+```
+import React from "react";
+class XxxErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false
+    };
+  }
 
-In the project directory, you can run:
+  static getDerivedStateFromError = error => {
+    return {
+      hasError: true
+    };
+  };
 
-### `npm start`
+  componentDidCatch = (error, info) => {
+    console.log(`${error}  = ${info}`);
+  };
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  render() {
+    if (this.state.hasError) {
+      return (
+        <React.Fragment>
+           // cod for showing in case of error 
+        </React.Fragment>
+      );
+    } else {
+      return this.props.children;
+    }
+  }
+}
+export default XxxErrorBoundary;
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Code where error boundries are used 
+* encapuslate the actual component call with in error boundries 
+```
+import React from "react";
+import Row from "./Row";
+import XxxErrorBoundary from "./XxxErrorBoundary";
+import users from "../store/users.json";
 
-### `npm test`
+class UserList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  render() {
+    return (
+      <div>
+        <h1>USER INFORMATION </h1>
+        {users.map(user => (
+          <XxxErrorBoundary user={user}>
+            <Row user={user} />
+          </XxxErrorBoundary>
+        ))}
+      </div>
+    );
+  }
+}
+export default UserList;
+``` 
 
-### `npm run build`
+### To build the appliation 
+* npm run build
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### To Start the application 
+* npm start
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# NOTE click on cross button on browser when its showing error so actuall ui will be visiable 
