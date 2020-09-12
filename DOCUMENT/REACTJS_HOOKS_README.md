@@ -11,6 +11,8 @@
 * usecallback 
 * customhook 
 
+### Don't call hooks inside loops conditons or nested functions 
+### Ony call hooks from reacts functtional component not from regualr js 
 
 ---
 
