@@ -34,6 +34,8 @@
 
 * [REACTJS_REFS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_REFS_README.md)
 
+* [REACTJS_ERROR_BOUNDRIES_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_ERROS_BOUNDRIES_README.md)
+
 * [REACTJS_HIGHER_ORDER_COMPONENT_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_HIGHER_ORDER_COMPONENT_README.md)
 
 * [REACTJS_RENDER_PROPS_COMPONENT_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_RENDER_PROPS_README.md)
