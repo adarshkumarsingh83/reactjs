@@ -22,7 +22,7 @@
 ### [REACTJS USESTATE HOOK FUNCTIONAL PARAM EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-usestate-funtionparm)
 
 * NOTE
-	* useState hook setXxx() will not merge the previous state of object or array we have to do manually 
+	* useState hook setXxx() will not merge the previous state of object or array we have to do manually using spread operators "...varName"
 
 * import the useState Hook 
 ```
