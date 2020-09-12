@@ -34,6 +34,8 @@
 
 * [REACTJS_REFS_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_REFS_README.md)
 
+* [REACTJS_HIGHER_ORDER_COMPONENT_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REACTJS_HIGHER_ORDER_COMPONENT_README.md)
+
 * [REDUX_INSTALLTION_DOCUMENT](https://github.com/adarshkumarsingh83/reactjs/blob/master/DOCUMENT/REDUX_HELP.README.md)
 
 ---
