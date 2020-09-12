@@ -28,7 +28,12 @@
 * use in function component
 ```
   const  functionName = () => {
-    const [varName , setVarName] = useState(initValueOfVar);
+    const [varName , setVar] = useState(initValueOfVar);
+
+    doOperaton = () =>{
+           setVar(prevVarName => { prevVarName + 1 } );
+    }
+
     return (
          <div>
             {varName}
