@@ -55,6 +55,7 @@
 
 ### [REACTJS USEEFFECT HOOK BASIC EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-useeffect)
 ### [REACTJS USEEFFECT HOOK CONDITIONAL RENDERING EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-useeffect-conditional-rendering)
+### [REACTJS USEEFFECT DATA FETCHING EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/react-useeffect-data-fetching)
 * componentDidMount() componentDisUpdate() & componentWillUnmount() can be replaced with the useEffect hook 
 
 * import the useEffect Hook 
