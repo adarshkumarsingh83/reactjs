@@ -57,6 +57,50 @@
 ### [REACTJS USEEFFECT HOOK CONDITIONAL RENDERING EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-hook-useeffect-conditional-rendering)
 * componentDidMount() componentDisUpdate() & componentWillUnmount() can be replaced with the useEffect hook 
 
+* import the useEffect Hook 
+```
+ import { useEffect } from 'react';
+```
+
+* use in function component
+```
+  const  functionName = () => {    
+    const [varName , setVar] = useState(initValueOfVar);
+    doOperaton = () =>{
+           setVar(prevVarName => { prevVarName + 1 } );
+         useEffect( () => {
+               // code which is requred to execute after every update of component 
+               document.title = `${varName}`         
+           }
+        )
+    }
+    return (
+         <div>
+            {varName}
+         </div>
+    );
+  }
+```
+
+* use in function component with conditional rendering 
+```
+  const  functionName = () => {    
+    const [varName , setVar] = useState(initValueOfVar);
+    doOperaton = () =>{
+           setVar(prevVarName => { prevVarName + 1 } );
+         useEffect( () => {
+               // code which is requred to execute after every update of component 
+               document.title = `${varName}`         
+             }
+        ,[varName]) // if their is change in varName value then only executed the effect
+    }
+    return (
+         <div>
+            {varName}
+         </div>
+    );
+  }
+```
 ---
 
 ### [REACTJS USERREDUCER HOOK EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usereducers-hook)
