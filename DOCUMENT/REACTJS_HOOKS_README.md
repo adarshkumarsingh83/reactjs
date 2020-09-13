@@ -89,7 +89,7 @@
     doOperaton = () =>{
            setVar(prevVarName => { prevVarName + 1 } );
          useEffect( () => {
-               // code which is requred to execute after every update of component 
+               // code which is requred to execute after every update of varName var  
                document.title = `${varName}`         
              }
         ,[varName]) // if their is change in varName value then only executed the effect
@@ -109,10 +109,36 @@
     doOperaton = () =>{
            setVar(prevVarName => { prevVarName + 1 } );
          useEffect( () => {
-               // code which is requred to execute after every update of component 
+               // code which is requred to execute only once 
                document.title = `${varName}`         
              }
         ,[]) // empty array is only for init execution of the component 
+    }
+    return (
+         <div>
+            {varName}
+         </div>
+    );
+  }
+```
+
+* use in function component with componentUnmount functionality 
+```
+  const  functionName = () => {    
+    const [varName , setVar] = useState(initValueOfVar);
+    doOperaton = () =>{
+           setVar(prevVarName => { prevVarName + 1 } );
+         useEffect( () => {
+               
+               // code which is requred to execute
+            
+               return () => {
+                  
+                  //clean up functon code like unmouninting the event listener 
+
+               }  
+             }
+        ,[]) 
     }
     return (
          <div>
