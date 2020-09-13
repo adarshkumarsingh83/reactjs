@@ -101,6 +101,26 @@
     );
   }
 ```
+
+* use in function component with only once execution which is innit rendering of component 
+```
+  const  functionName = () => {    
+    const [varName , setVar] = useState(initValueOfVar);
+    doOperaton = () =>{
+           setVar(prevVarName => { prevVarName + 1 } );
+         useEffect( () => {
+               // code which is requred to execute after every update of component 
+               document.title = `${varName}`         
+             }
+        ,[]) // empty array is only for init execution of the component 
+    }
+    return (
+         <div>
+            {varName}
+         </div>
+    );
+  }
+```
 ---
 
 ### [REACTJS USERREDUCER HOOK EXAMPLE ](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usereducers-hook)
