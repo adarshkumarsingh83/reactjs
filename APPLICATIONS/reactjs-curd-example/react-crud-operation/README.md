@@ -11,7 +11,7 @@
 * $ npm install rest --save 
 * $ npm install react-router-dom --save 
 * $ npm install typescript --save 
-* $ npm install bootstrap jquery propper propper.js --save
+* $ npm install bootstrap jquery popper --save
 
 
 ### import the bootstrap in index.js

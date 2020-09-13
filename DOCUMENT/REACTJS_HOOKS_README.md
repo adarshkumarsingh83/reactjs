@@ -89,7 +89,7 @@
     doOperaton = () =>{
            setVar(prevVarName => { prevVarName + 1 } );
          useEffect( () => {
-               // code which is requred to execute after every update of varName var  
+               // code which is requred to execute after every update of varName var   
                document.title = `${varName}`         
              }
         ,[varName]) // if their is change in varName value then only executed the effect
