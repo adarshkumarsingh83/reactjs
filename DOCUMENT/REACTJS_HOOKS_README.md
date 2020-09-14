@@ -50,6 +50,27 @@
 ---
 
 ### [REACTJS USECONTEXT HOOK EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usecontext-hook)
+* to ensure the context is avaliable in the functional component 
+
+* import the useContext Hook 
+```
+ import { useContext } from 'react';
+```
+
+* use in function component
+```
+  const  functionName = () => {
+    
+    const xxxContext = useContext(XxxContext)
+
+    return (
+         <div>
+            { xxxContext }
+         </div>
+    );
+  }
+
+```
 
 ---
 
