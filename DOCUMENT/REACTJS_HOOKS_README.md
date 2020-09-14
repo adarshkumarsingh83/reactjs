@@ -176,6 +176,8 @@
 ### [REACTJS USEREDUCER COMPLEX OBJECT HOOK EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usereducers-complex-object-hook)
 ### [REACTJS USEREDUCER CONTEXT HOOK EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usereducers-context-hook)
 
+* useReducer is used for state mgmt its alternative to useState hook
+
 ---
 
 ### [REACTJS USECALLBACK HOOK EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-usecallback-hook)
