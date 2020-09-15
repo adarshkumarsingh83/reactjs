@@ -9,15 +9,13 @@
 ### o install dependent lib
 * $ npm install node-gyp --save
 * $ npm install typescript --save
-* $ npm install bootstrap jquery popper.js --save
+* $ npm install bootstrap  --save
 
 ### import the bootstrap in index.js
 * proj/src/index.js
 * add below import statement in index.js
 ```
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.min.js'
-import 'jquery/dist/jquery.min.js';
 ```
 
 ### To Build 
