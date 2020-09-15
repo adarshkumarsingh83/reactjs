@@ -1,0 +1,15 @@
+version: '3'
+services: 
+    reactjs-docker:
+        container_name: "reactjs-docker"
+        stdin_open: true    
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+        - '.:/app'
+        - '/app/node_modules'
+        ports:
+        - 3000:3000
+        
