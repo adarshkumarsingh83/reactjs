@@ -18,8 +18,11 @@ class ListEmployeeComponent extends Component {
     EmployeeService.fetchEmployee()
       .then((res) => {
         this.setState({ message: "Employee fetch operation is successfull " });
-        console.log(res.data);
-        this.setState({ employees: res.data });
+        console.log(
+          `ListEmployeeComponent.reloadEmployeeList()`,
+          res.data.data
+        );
+        this.setState({ employees: res.data.data });
       })
       .catch((error) => {
         this.setState({ message: "Employee fetch operation is failed " });

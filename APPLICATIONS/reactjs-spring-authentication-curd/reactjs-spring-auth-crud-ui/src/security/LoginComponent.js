@@ -19,6 +19,8 @@ class LoginComponent extends Component {
         console.log(`Response Data `, dataResponse);
         if (dataResponse.token !== null) {
           LocalStorageService.saveInStorage({
+            token: dataResponse.token,
+            tokenKey: dataResponse.key,
             isAuthenticated: dataResponse.token !== "",
             userName: userBean.userName,
             isAdmin: userBean.userRoles[0] === "ADMIN",
