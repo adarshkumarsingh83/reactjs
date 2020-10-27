@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import LocalStorageService from "../service/LocalStorageService";
 
-const SecurityGuard = ({ component: Component, auth, ...rest }) => {
-  console.log("SecurityGuard params :", auth, rest);
+const SecurityGuard = ({ component: Component, ...rest }) => {
+  console.log("SecurityGuard params :", rest);
   const authStatus = LocalStorageService.isCurrentUserAuthenticated();
   console.log(`auth status `, authStatus);
   return (

@@ -11,17 +11,7 @@ import LoginComponent from "./security/LoginComponent";
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      isAutheticated: false,
-    };
-  }
-
-  login() {
-    this.setState({ isAutheticated: true });
-  }
-
-  logout() {
-    this.setState({ isAutheticated: false });
+    console.log(`App.constructor()`);
   }
 
   render() {
@@ -33,26 +23,19 @@ class App extends Component {
           </div>
           <Switch>
             <Route path="/login" component={LoginComponent} />
-            <SecurityGuard
-              path="/"
-              component={ListEmployeeComponent}
-              auth={this.state.isAutheticated}
-            />
+            <SecurityGuard path="/" component={ListEmployeeComponent} />
 
             <SecurityGuard
               path="/employees-list"
               component={ListEmployeeComponent}
-              auth={this.state.isAutheticated}
             />
             <SecurityGuard
               path="/add-employee"
               component={AddEmployeeComponent}
-              auth={this.state.isAutheticated}
             />
             <SecurityGuard
               path="/edit-employee"
               component={EditEmployeeComponent}
-              auth={this.state.isAutheticated}
             />
           </Switch>
         </Router>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LocalStorageService from "../service/LocalStorageService";
+import AuthenticationService from "../service/AuthenticationService";
 
 class LoginComponent extends Component {
   constructor(props) {
@@ -11,22 +12,37 @@ class LoginComponent extends Component {
   login = (e) => {
     e.preventDefault();
     console.log(``, this.state.userName, this.state.userPwd);
-    if (this.state.userName === this.state.userPwd) {
-      LocalStorageService.saveInStorage({
-        userName: this.state.userName,
-        isAuthenticated: true,
-        isAdmin: true,
-        isUser: false,
-        isGuest: false,
+    AuthenticationService.login(this.state.userName, this.state.userPwd)
+      .then((response) => {
+        const dataResponse = response.data.data;
+        let userBean = dataResponse.userBean;
+        console.log(`Response Data `, dataResponse);
+        if (dataResponse.token !== null) {
+          LocalStorageService.saveInStorage({
+            isAuthenticated: dataResponse.token !== "",
+            userName: userBean.userName,
+            isAdmin: userBean.userRoles[0] === "ADMIN",
+            isUser: userBean.userRoles[0] === "USER",
+            isGuest: userBean.userRoles[0] === "GUEST",
+            email: userBean.email,
+          });
+          this.props.history.push("/");
+        } else {
+          this.props.history.push("/login");
+        }
+      })
+      .catch((error) => {
+        console.log(`Error`, error);
+        this.props.history.push("/login");
+      })
+      .finally(() => {
+        console.log(`fetch operation call completed`);
       });
-      this.props.history.push("/");
-    }
-  }
+  };
 
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-  }
-
+  };
 
   render() {
     return (
