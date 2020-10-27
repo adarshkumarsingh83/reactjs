@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.espark.adarsh</groupId>
-	<artifactId>springboot-curd</artifactId>
+	<artifactId>springboot-crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-curd</name>
 	<description>Demo project for Spring Boot</description>

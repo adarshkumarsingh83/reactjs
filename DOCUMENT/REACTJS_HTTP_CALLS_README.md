@@ -4,7 +4,7 @@
 * axios is used for making http communication with api services 
 ---
 
-## [REACTJS HTTP COMMUNICATON EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-curd-example/react-crud-operation)
+## [REACTJS HTTP COMMUNICATON EXAMPLE](https://github.com/adarshkumarsingh83/reactjs/tree/master/APPLICATIONS/reactjs-crud-example/react-crud-operation)
 
 ### To install dependent lib 
 * $ npm install axios --save 
