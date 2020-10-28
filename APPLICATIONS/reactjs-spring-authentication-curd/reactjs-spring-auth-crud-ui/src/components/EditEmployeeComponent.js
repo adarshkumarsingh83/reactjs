@@ -35,6 +35,7 @@ class EditEmployeeComponent extends Component {
         console.log(error);
       })
       .finally(() => {
+        window.localStorage.removeItem("id");
         console.log(`fetch operation call completed`);
       });
   };

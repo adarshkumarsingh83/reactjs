@@ -21,8 +21,9 @@ class App extends Component {
           <div className="alert alert-primary " role="alert">
             <h4 className="display-5 center">Espark Innovation Labs</h4>
           </div>
-          <Switch>
+          <Switch >
             <Route path="/login" component={LoginComponent} />
+
             <SecurityGuard path="/" component={ListEmployeeComponent} />
 
             <SecurityGuard

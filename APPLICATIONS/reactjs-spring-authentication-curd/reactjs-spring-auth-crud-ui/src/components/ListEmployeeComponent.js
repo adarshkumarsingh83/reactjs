@@ -17,12 +17,14 @@ class ListEmployeeComponent extends Component {
   reloadEmployeeList = () => {
     EmployeeService.fetchEmployee()
       .then((res) => {
-        this.setState({ message: "Employee fetch operation is successfull " });
+        this.setState({
+          message: "Employee fetch operation is successfull ",
+          employees: res.data.data,
+        });
         console.log(
           `ListEmployeeComponent.reloadEmployeeList()`,
           res.data.data
         );
-        this.setState({ employees: res.data.data });
       })
       .catch((error) => {
         this.setState({ message: "Employee fetch operation is failed " });
@@ -60,7 +62,6 @@ class ListEmployeeComponent extends Component {
   };
 
   addEmployee = () => {
-    window.localStorage.removeItem("id");
     this.props.history.push("/add-employee");
   };
 
