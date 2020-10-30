@@ -10,6 +10,7 @@ import LoginComponent from "./security/LoginComponent";
 import { createBrowserHistory } from "history";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import InvalidUrl from "./components/InvalidUrl";
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +21,6 @@ class App extends Component {
       userLoggedIn: false,
     };
   }
-
-  
 
   render() {
     const history = createBrowserHistory();
@@ -59,6 +58,7 @@ class App extends Component {
                 history={history}
                 component={EditEmployeeComponent}
               />
+              <Route component={InvalidUrl} />
             </Switch>
           </div>
 
