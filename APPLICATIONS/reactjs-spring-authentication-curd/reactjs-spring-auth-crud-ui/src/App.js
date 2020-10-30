@@ -8,52 +8,63 @@ import AddEmployeeComponent from "./components/AddEmployeeComponent";
 import EditEmployeeComponent from "./components/EditEmployeeComponent";
 import LoginComponent from "./security/LoginComponent";
 import { createBrowserHistory } from "history";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 class App extends Component {
   constructor(props) {
     super(props);
     console.log(`App.constructor()`, props);
+    this.state = {
+      history: createBrowserHistory(),
+      userLoggedIn: false,
+    };
   }
+
+  
 
   render() {
     const history = createBrowserHistory();
     return (
-      <div className="container">
-        <Router history={history}>
-          <div className="alert alert-primary " role="alert">
-            <h4 className="display-5 center">Espark Innovation Labs</h4>
+      <Router history={history}>
+        <div>
+          <Header />
+
+          <div className="container">
+            <Switch>
+              <Route path="/login" component={LoginComponent} />
+
+              <SecurityGuard
+                exact
+                path="/"
+                history={history}
+                component={ListEmployeeComponent}
+              />
+
+              <SecurityGuard
+                exact
+                path="/employees-list"
+                history={history}
+                component={ListEmployeeComponent}
+              />
+              <SecurityGuard
+                exact
+                path="/add-employee"
+                history={history}
+                component={AddEmployeeComponent}
+              />
+              <SecurityGuard
+                exact
+                path="/edit-employee"
+                history={history}
+                component={EditEmployeeComponent}
+              />
+            </Switch>
           </div>
-          <Switch>
-            <Route path="/login" component={LoginComponent} />
 
-            <SecurityGuard
-              exact
-              path="/"
-              history={history}
-              component={ListEmployeeComponent}
-            />
-
-            <SecurityGuard
-              exact
-              path="/employees-list"
-              history={history}
-              component={ListEmployeeComponent}
-            />
-            <SecurityGuard
-              exact
-              path="/add-employee"
-              history={history}
-              component={AddEmployeeComponent}
-            />
-            <SecurityGuard
-              exact
-              path="/edit-employee"
-              history={history}
-              component={EditEmployeeComponent}
-            />
-          </Switch>
-        </Router>
-      </div>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
