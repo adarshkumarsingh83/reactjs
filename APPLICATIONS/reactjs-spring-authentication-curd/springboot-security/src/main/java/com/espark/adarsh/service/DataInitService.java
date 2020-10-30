@@ -47,7 +47,7 @@ public class DataInitService {
 
         Employee adarshEmployee = new Employee("adarsh", "kumar","adarsh@kumar", "It");
         adarshEmployee = this.employeeRepository.save(adarshEmployee);
-        Employee radhaEmployee = new Employee ("radha", "singh","radhaj@singh", "IT");
+        Employee radhaEmployee = new Employee ("radha", "singh","radha@singh", "IT");
         radhaEmployee = this.employeeRepository.save(radhaEmployee);
         Employee sonuEmployee = new Employee ("sonu", "singh","sonu@singh", "IT");
         sonuEmployee = this.employeeRepository.save(sonuEmployee);

@@ -4,6 +4,7 @@ import EmployeeService from "../service/EmployeeService";
 class ListEmployeeComponent extends Component {
   constructor(props) {
     super(props);
+    console.log("ListEmployeeComponent.constructor()", props);
     this.state = {
       employees: [],
       message: null,
@@ -85,7 +86,7 @@ class ListEmployeeComponent extends Component {
               <th>FirstName</th>
               <th>LastName</th>
               <th>Email</th>
-              <th>Age</th>
+              <th>Profession</th>
               <th>operations</th>
               <th>operations</th>
             </tr>
@@ -97,7 +98,7 @@ class ListEmployeeComponent extends Component {
                 <td>{employee.firstName}</td>
                 <td>{employee.lastName}</td>
                 <td>{employee.email}</td>
-                <td>{employee.age}</td>
+                <td>{employee.profession}</td>
                 <td>
                   <button
                     className="btn btn-success"
@@ -125,5 +126,4 @@ class ListEmployeeComponent extends Component {
     );
   }
 }
-
 export default ListEmployeeComponent;

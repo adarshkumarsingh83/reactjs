@@ -5,11 +5,12 @@ import EmployeeService from "../service/EmployeeService";
 class EditEmployeeComponent extends Component {
   constructor(props) {
     super(props);
+    console.log(`EditEmployeeComponent.constructor()`, props);
     this.state = {
       firstName: "",
       lastName: "",
       email: "",
-      age: "",
+      profession: "",
     };
   }
 
@@ -20,14 +21,14 @@ class EditEmployeeComponent extends Component {
   loadEmployee = () => {
     EmployeeService.fetchEmployeeById(window.localStorage.getItem("id"))
       .then((res) => {
-        let employee = res.data;
+        let employee = res.data.data;
         this.setState({ message: "Employee fetch operation is successfully " });
         this.setState({
           id: employee.id,
           firstName: employee.firstName,
           lastName: employee.lastName,
           email: employee.email,
-          age: employee.age,
+          profession: employee.profession,
         });
       })
       .catch((error) => {
@@ -51,7 +52,7 @@ class EditEmployeeComponent extends Component {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
-      age: this.state.age,
+      profession: this.state.profession,
     };
     EmployeeService.editEmployee(employee)
       .then((res) => {
@@ -107,13 +108,13 @@ class EditEmployeeComponent extends Component {
           </div>
 
           <div className="form-group">
-            <label>Age:</label>
+            <label>Profession:</label>
             <input
-              type="number"
-              placeholder="age"
-              name="age"
+              type="text"
+              placeholder="profession"
+              name="profession"
               className="form-control"
-              value={this.state.age}
+              value={this.state.profession}
               onChange={this.onChange}
             />
           </div>

@@ -1,6 +1,7 @@
 package com.espark.adarsh.bean;
 
 import com.espark.adarsh.entity.Employee;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class EmployeeBean implements Serializable {
         this.profession = employee.getProfession();
     }
 
+    @JsonIgnore
     public Employee getEmployee() {
         Employee employee = new Employee();
         employee.setId((this.getId() == 0 ? null : this.getId()));

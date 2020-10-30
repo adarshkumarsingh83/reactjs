@@ -15,14 +15,22 @@ class EmloyeeService {
     });
   }
 
-  static fetchEmployeeById(employeeId) {
+  static deleteEmployee(employeeId) {
     let token = LocalStorageService.getTokenAndKey();
     return axios.delete(EMPLOYEE_API_BASE_URL + "/" + employeeId, {
       headers: {
-        headers: {
-          "Content-Type": "application/json",
-          "X-TOKEN": token,
-        },
+        "Content-Type": "application/json",
+        "X-TOKEN": token,
+      },
+    });
+  }
+
+  static fetchEmployeeById(employeeId) {
+    let token = LocalStorageService.getTokenAndKey();
+    return axios.get(EMPLOYEE_API_BASE_URL + "/" + employeeId, {
+      headers: {
+        "Content-Type": "application/json",
+        "X-TOKEN": token,
       },
     });
   }
@@ -31,10 +39,8 @@ class EmloyeeService {
     let token = LocalStorageService.getTokenAndKey();
     return axios.post("" + EMPLOYEE_API_BASE_URL, employee, {
       headers: {
-        headers: {
-          "Content-Type": "application/json",
-          "X-TOKEN": token,
-        },
+        "Content-Type": "application/json",
+        "X-TOKEN": token,
       },
     });
   }
@@ -43,10 +49,8 @@ class EmloyeeService {
     let token = LocalStorageService.getTokenAndKey();
     return axios.put(EMPLOYEE_API_BASE_URL + "/" + employee.id, employee, {
       headers: {
-        headers: {
-          "Content-Type": "application/json",
-          "X-TOKEN": token,
-        },
+        "Content-Type": "application/json",
+        "X-TOKEN": token,
       },
     });
   }

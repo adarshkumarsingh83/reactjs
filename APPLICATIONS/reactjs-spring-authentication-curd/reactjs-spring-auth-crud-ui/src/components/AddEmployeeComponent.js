@@ -5,11 +5,12 @@ import EmployeeService from "../service/EmployeeService";
 class AddEmployeeComponent extends Component {
   constructor(props) {
     super(props);
+    console.log(`AddEmployeeComponent.constructor()`, props);
     this.state = {
       firstName: "",
       lastName: "",
       email: "",
-      age: "",
+      profession: "",
       message: null,
     };
   }
@@ -17,10 +18,11 @@ class AddEmployeeComponent extends Component {
   saveEmployee = (e) => {
     e.preventDefault();
     let user = {
+      id: 0,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
-      age: this.state.age,
+      profession: this.state.profession,
     };
     EmployeeService.addEmployee(user)
       .then((res) => {
@@ -80,13 +82,13 @@ class AddEmployeeComponent extends Component {
           </div>
 
           <div className="form-group">
-            <label>Age:</label>
+            <label>Profession:</label>
             <input
-              type="number"
-              placeholder="age"
-              name="age"
+              type="text"
+              placeholder="profession"
+              name="profession"
               className="form-control"
-              value={this.state.age}
+              value={this.state.profession}
               onChange={this.onChange}
             />
           </div>
