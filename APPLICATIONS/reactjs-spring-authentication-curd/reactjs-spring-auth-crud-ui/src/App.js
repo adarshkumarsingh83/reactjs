@@ -28,7 +28,6 @@ class App extends Component {
       <Router history={history}>
         <div>
           <Header />
-
           <div className="container">
             <Switch>
               <Route path="/login" component={LoginComponent} />

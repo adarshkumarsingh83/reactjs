@@ -2,7 +2,6 @@ package com.espark.adarsh.web;
 
 import com.espark.adarsh.bean.ApiResponseBean;
 import com.espark.adarsh.bean.EmployeeBean;
-import com.espark.adarsh.entity.Employee;
 import com.espark.adarsh.exception.ResourceNotFound;
 import com.espark.adarsh.service.EmployeeService;
 import io.swagger.annotations.Api;

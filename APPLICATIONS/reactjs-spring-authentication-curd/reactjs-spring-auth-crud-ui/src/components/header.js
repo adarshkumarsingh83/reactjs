@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import LocalStorageService from "../service/LocalStorageService";
 
 class Header extends Component {
+  
   constructor(props) {
     super(props);
     console.log(`Header.constructor()`, props);
