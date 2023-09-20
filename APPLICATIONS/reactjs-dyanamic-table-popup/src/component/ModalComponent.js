@@ -22,7 +22,8 @@ const ModalComponent = ({ handleClose, details }) => {
   return (
           <div className="modal display-block">
             <section className="modal-main">
-              <div className="App">
+        <div className="App">
+          <div className="tableContainer" >
                 <table class="table">
                     <thead>
                       <tr>
@@ -33,7 +34,8 @@ const ModalComponent = ({ handleClose, details }) => {
                   <tbody>
                       <RenderTableData row={details} />                     
                   </tbody>
-                </table>
+          </table>
+          </div>
               </div>
               <button class="button button1" onClick={handleClose}>close</button>
             </section>
