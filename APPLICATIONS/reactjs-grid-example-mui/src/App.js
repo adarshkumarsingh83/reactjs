@@ -1,6 +1,7 @@
 
 
 import './App.css';
+import TableComponent from './component/TableComponent';
 import GridComponent from './component/GridComponent';
 <link
   rel="stylesheet"
@@ -11,8 +12,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <br />
+        <br />
+        <GridComponent />
         <br/>
-        <GridComponent/>
+        <TableComponent />
       </header>
     </div>
   );
