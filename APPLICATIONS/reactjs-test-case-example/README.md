@@ -1,3 +1,6 @@
+- jestjs
+  https://jestjs.io/docs/mock-functions
+
 - npx create-react-app reactjs-test-case-example
   -cd reactjs-test-case-example
 

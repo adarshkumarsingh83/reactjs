@@ -4,6 +4,7 @@ import Greeting from './component/Greating';
 import Wish from './component/Wish';
 import Greating  from './component/Greating';
 import Table from './component/Table';
+import ButtonClick from './component/ButtonClick';
 
 function App() {
   const data = [
@@ -20,8 +21,9 @@ function App() {
         <br />
         <Greating name={"adarsh kumar"} />
         <br />
-        <Table data={data}/>
-
+        <Table data={data} />
+        <br />
+        <ButtonClick msg={"adarsh kumar "} />
       </header>
     </div>
   );
